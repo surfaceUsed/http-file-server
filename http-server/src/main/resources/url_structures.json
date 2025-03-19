@@ -1,0 +1,9 @@
+{
+  "/files" : {
+    "DELETE" : [ "/files/name/{name}", "/files/id/{id}" ],
+    "POST" : [ "/files/name/{name}" ],
+    "GET" : [ "/files/name/{name}?action={action}", "/files/id/{id}?action={action}", "/files/keyword/{keyword}?action={action}" ],
+    "PUT" : [ "/files/name/{name}?action={action}", "/files/id/{id}?action={action}", "/files/name/{name}?action={action}&value={value}",
+      "/files/id/{id}?action={action}&value={value}" ]
+  }
+}

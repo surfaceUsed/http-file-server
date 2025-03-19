@@ -1,0 +1,37 @@
+{
+  "currentId" : 5,
+  "data" : {
+    "1" : {
+      "fileId" : 1,
+      "fileName" : "update.txt",
+      "fileType" : "<TXT>",
+      "fileSize" : "0 kb (23 bytes)",
+      "timeCreated" : "31.12.2024 18:30",
+      "timeUpdated" : "22.01.2025 11:17"
+    },
+    "2" : {
+      "fileId" : 2,
+      "fileName" : "tiger.jpg",
+      "fileType" : "<JPG>",
+      "fileSize" : "41 kb (42833 bytes)",
+      "timeCreated" : "31.12.2024 18:31",
+      "timeUpdated" : "31.12.2024 18:31"
+    },
+    "3" : {
+      "fileId" : 3,
+      "fileName" : "two.txt",
+      "fileType" : "<TXT>",
+      "fileSize" : "0 kb (33 bytes)",
+      "timeCreated" : "31.12.2024 18:31",
+      "timeUpdated" : "31.12.2024 18:31"
+    },
+    "4" : {
+      "fileId" : 4,
+      "fileName" : "data.txt",
+      "fileType" : "<TXT>",
+      "fileSize" : "1 kb (1037 bytes)",
+      "timeCreated" : "21.01.2025 16:05",
+      "timeUpdated" : "21.01.2025 16:05"
+    }
+  }
+}
