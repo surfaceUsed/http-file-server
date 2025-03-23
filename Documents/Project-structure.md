@@ -1,7 +1,7 @@
 # Project structure
 
 ```plaintext
-http-server/
+http-file-server/
 │
 └── src/main/java/org/example/
 |   ├── command/
