@@ -38,19 +38,19 @@ When the server starts, it loads several configuration files that define its beh
           "data" : {
               "1" : {
               "fileId" : 1,
-              "fileName" : "text-one.txt",
+              "fileName" : "test-file.txt",
               "fileType" : "<TXT>",
-              "fileSize" : "0 kb (26 bytes)",
-              "timeCreated" : "20.03.2025 08:23",
-              "timeUpdated" : "20.03.2025 08:23"
+              "fileSize" : "0 kb (32 bytes)",
+              "timeCreated" : "23.03.2025 19:44",
+              "timeUpdated" : "23.03.2025 19:44"
               },
               "2" : {
               "fileId" : 2,
-              "fileName" : "text-two.txt",
+              "fileName" : "test-file2.txt",
               "fileType" : "<TXT>",
-              "fileSize" : "0 kb (26 bytes)",
-              "timeCreated" : "20.03.2025 09:20",
-              "timeUpdated" : "20.03.2025 09:20"
+              "fileSize" : "0 kb (33 bytes)",
+              "timeCreated" : "23.03.2025 19:45",
+              "timeUpdated" : "23.03.2025 19:45"
               }
            }
         }
