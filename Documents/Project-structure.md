@@ -3,7 +3,7 @@
 ```plaintext
 http-file-server/
 │
-└── src/main/java/org/example/
+├── src/main/java/org/example/
 |   ├── command/
 |   │   ├── files/
 |   │   │   ├── handlers/
@@ -22,7 +22,7 @@ http-file-server/
 |   |   |
 |   │   ├── Command.java
 |   │   ├── ContentTypeValidator.java
-|   │   ├── RequestHandlerInitializer.java
+|   │   └── RequestHandlerInitializer.java
 |   │
 |   ├── config/
 |   │   ├── ConfigurationManager.java
@@ -68,7 +68,7 @@ http-file-server/
 |   │   │   ├── HttpRequest.java
 |   │   │   └── HttpRequestParser.java
 |   |   |
-|   │   ├── response/
+|   │   └── response/
 |   │       ├── HttpResponse.java
 |   │       ├── HttpResponseInitializer.java
 |   │       └── ResponseHandler.java
