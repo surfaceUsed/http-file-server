@@ -137,15 +137,15 @@ Below is a list of administrator commands:
 
 ### Sections
 
-- [Project structure]()
-- [Configuration files]()
-- [Server file system]()
-- [Request and response handling]()
-- [URL structure]()
-- [Dynamic URL pattern matching]()
-- [Server endpoints]()
-- [Servlet routing]()
-- Http methods: [GET](), [PUT](), [POST](), [DELETE]()
+- [Project structure](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Project-structure.md)
+- [Configuration files](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Config-files.MD)
+- [Server file system](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/File-system.md)
+- [Request and response handling](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Request-and-responses.md)
+- [URL structure](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Urls-explained.md)
+- [Dynamic URL pattern matching](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Dynamic-url-pattern-matching.md)
+- [Server endpoints](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Server-endpoints.md)
+- [Servlet routing](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Servlet-routing.md)
+- Http methods: [GET](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Get.md), [PUT](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Put.md), [POST](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Post.md), [DELETE]()
 - [Installing the application]()
 - [Running the application]()
 
