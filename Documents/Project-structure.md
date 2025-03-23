@@ -102,8 +102,8 @@ http-file-server/
 |   │
 |   └── resources/
 |       ├── files/
-|       │   ├── file-one.txt
-|       │   └── file-two.txt
+|       │   ├── test-file.txt
+|       │   └── test-file2.txt
 |       |      
 |       ├── application.properties
 |       ├── files_metadata.json
