@@ -11,7 +11,7 @@ The server handles HTTP requests by parsing the incoming data to determine the r
 
 2. Request components:
    - The **request line** contains the HTTP method, requested URL and the HTTP version used to make the request.
-   - The **headers** provides additional metadata about the request, and is used to interpret the request. 
+   - The **headers** provide additional metadata about the request, and is used to interpret the request. 
    - The **request body** contains specific data, such as a file, which is sent by the client. This component is processed only when the `Content-Length` header is present, as it indicates the size of the body content to be read.
 
    Request format:
@@ -39,7 +39,7 @@ Responses are generated only after the request has been fully parsed and process
 
 2. Response components:
    - The **status line** contains the http-version, status code and a status message, and indicates the result of the request.
-   - The **headers** provides metadata about the response. 
+   - The **headers** provide metadata about the response. 
    - The **response body** contains the actual content returned by the server. This can include file data or a message with a detailed explanation of the result.
 
    Response format:

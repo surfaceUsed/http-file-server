@@ -58,7 +58,7 @@ When the server starts, it loads several configuration files that define its beh
     The JSON structure consists of two root fields:
     - `currentId` -> Keeps track of the latest assigned file id. When a new file is uploaded, this value is incremented, and given to that file. This helps prevent ID collisions and ensures unique file identifiers.
     - `data` -> Keeps mapping of file IDs to their metadata. Each file is stored under a unique ID as a key-value pair. 
-    - Read more about how the server manages data [here]().
+    - Read more about how the server manages data [here](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/File-system.md).
 
 
 3. `url_structures.json`: The file defines the supported API endpoint structures for handling file-related requests in the server. It maps server endpoints to supported HTTP methods (`GET`, `PUT`, `POST`, `DELETE`) and their corresponding URL patterns. This enables the server to correctly process and route incoming client requests. 
@@ -67,10 +67,10 @@ When the server starts, it loads several configuration files that define its beh
     
     The JSON file contains a JSON object with the key `/files`, which represents the primary endpoint that manages the file system. Each HTTP method has an array of generic URL patterns that the server accepts. This allows the server to handle operations based on file name, ID, query parameters, and actions.
 
-    Read more about the URLs funtion and structure [here]().
+    Read more about the URLs function and structure [here](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Urls-explained.md).
      
     **URL explained**
     
     - Each URL pattern follows a generic structure, incorporating placeholders enclosed in curly brackets (`{}`) that represents dynamic
     values provided by the client.
-    - Read more about the URL dynamic pattern matching [here]().
+    - Read more about the URL dynamic pattern matching [here](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Dynamic-url-pattern-matching.md).

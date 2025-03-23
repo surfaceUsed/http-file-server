@@ -1,12 +1,16 @@
 # Server endpoints
 
-The server currently exposes a single endpoint: `/files`. This endpoint serves as the entry point for interacting with the file system and handles all file management operations. 
+The server currently exposes a single endpoint: `/files`. This endpoint serves as the entry point for interacting with 
+the file system and handles all file management operations. 
 
-The `/files` endpoint is tied to a root directory that facilitates the file operations. It maps specific HTTP requests to corresponding file actions, allowing clients to interact with the server's file system. This functionality is managed through a set of HTTP methods (`GET`, `POST`, `PUT`, `DELETE`), each of which performs a different operation on the files stored on the server.
+The `/files` endpoint is tied to a root directory that facilitates the file operations. It maps specific HTTP requests 
+to corresponding file actions, allowing clients to interact with the server's file system. This functionality is managed 
+through a set of HTTP methods (`GET`, `POST`, `PUT`, `DELETE`), each of which performs a different operation on the files stored on the server.
 
 **How It Works**
 
-The `UrlRootDirectory` enum defines the servers root directories, and each root directory is associated with a set of handlers for different HTTP methods.
+The `UrlRootDirectory` enum defines the servers root directories, and each root directory is associated with a set of 
+handlers for different HTTP methods.
 
 Each HTTP method is mapped to a specific `Command` that is responsible for executing the corresponding file operation:
 
@@ -15,11 +19,13 @@ Each HTTP method is mapped to a specific `Command` that is responsible for execu
 - `PUT`: Updates an existing file.
 - `DELETE`: Removes a file from the server.
 
-These handlers are executed through the `FileService`, which is responsible for interacting with the file system, making the server capable of handling file operations efficiently.
+These handlers are executed through the `FileService`, which is responsible for interacting with the file system, making 
+the server capable of handling file operations efficiently.
 
 **Future Updates**
 
-In the future, additional endpoints may be added to support other functionalities or service areas. The current setup allows easy extensibility, enabling more root directories and associated file operations to be incorporated seamlessly.
+In the future, additional endpoints may be added to support other functionalities or service areas. The current setup 
+allows easy extensibility, enabling more root directories and associated file operations to be incorporated seamlessly.
 
 **Key Points**
 
