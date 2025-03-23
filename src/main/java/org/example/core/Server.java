@@ -52,7 +52,7 @@ public class Server implements Runnable {
 
                 Socket socket = this.serverSocket.accept();
 
-                LogHandler.handleLog(LOGGER, LoggerType.INFO, "Client connected! " + socket);
+                LogHandler.handleLog(LOGGER, LoggerType.INFO, "Client connected!");
 
                 this.executor.submit(new Session(socket, this));
 

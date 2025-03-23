@@ -8,7 +8,6 @@ import org.example.http.response.ResponseHandler;
 import org.example.model.UrlRouter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -90,7 +89,7 @@ public class FileServlet implements HttpServlet {
     public void destroy() {
         if (this.servletInitiated.get()) {
             try {
-                this.root.close();
+                this.root.close(); // Saves the metadata.
                 LOGGER.info("[INFO] FileServlet destroyed and modifications saved to file 'files_metadata.json' " +
                         "successfully.");
             } catch (IOException e) {

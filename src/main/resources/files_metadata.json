@@ -1,4 +1,21 @@
 {
-  "currentId" : 0,
-  "data" : {}
+  "currentId" : 2,
+  "data" : {
+    "1" : {
+      "fileId" : 1,
+      "fileName" : "test-file.txt",
+      "fileType" : "<TXT>",
+      "fileSize" : "0 kb (32 bytes)",
+      "timeCreated" : "23.03.2025 19:44",
+      "timeUpdated" : "23.03.2025 19:44"
+    },
+    "2" : {
+      "fileId" : 2,
+      "fileName" : "test-file2.txt",
+      "fileType" : "<TXT>",
+      "fileSize" : "0 kb (33 bytes)",
+      "timeCreated" : "23.03.2025 19:45",
+      "timeUpdated" : "23.03.2025 19:45"
+    }
+  }
 }

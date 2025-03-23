@@ -97,12 +97,6 @@ public final class JsonUtil {
     }
 
     /**
-     *
-     * If a client requests metadata for a file or a list of files, the data will be sent as a single json-string
-     * without the filed name of the variable from the message-object.
-     */
-
-    /**
      * Creates a JSON message body from an HttpMessage object. If the message contains a list, only the list is
      * serialized; otherwise, the full message is serialized.
      *
@@ -112,7 +106,6 @@ public final class JsonUtil {
     public static byte[] createJsonMessageBody(HttpMessage message) {
 
         try {
-            // removes the field name from printed list object.
             return (message.getList() != null) ?
                     JsonUtil.toJsonString(message.getList()).getBytes(StandardCharsets.UTF_8) :
                     JsonUtil.toJsonString(message).getBytes(StandardCharsets.UTF_8);

@@ -5,8 +5,6 @@ import org.example.enums.ConnectionStatus;
 import org.example.enums.ContentType;
 import org.example.enums.Header;
 import org.example.model.HttpMessage;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -26,7 +24,6 @@ import java.util.Map;
  */
 public class HttpResponse {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(HttpResponse.class);
     private static final String HTTP_VERSION = ConfigurationManager.getInstance().getServerProperties().getHttpVersion();
     private static final String SERVER_NAME = ConfigurationManager.getInstance().getServerProperties().getServerName();
 

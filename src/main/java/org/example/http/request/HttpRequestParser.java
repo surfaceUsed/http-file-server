@@ -41,20 +41,12 @@ public class HttpRequestParser {
      */
     public static HttpRequest parseRequest(InputStream input) throws HttpRequestParserException, IOException {
         HttpRequest request = new HttpRequest();
-        DataInputStream fromStream = new DataInputStream(input); // Creates a DataInputStream that wraps the input stream that gets passed to the method, and is used by the other methods to initiate and parse the Http request from the client.
+        DataInputStream fromStream = new DataInputStream(input);
         parseRequestLine(fromStream, request);
         parseRequestHeaders(fromStream, request);
         parseRequestBody(fromStream, request);
         return request;
     }
-
-    /**
-     *
-     * Parses the http request line, character by character.
-     *
-     * When \r\n is met, indicating a new line is coming up, the full string is used to set the request line variables
-     * of the HttpRequest object.
-     */
 
     /**
      * Parses the request line of the HTTP request, extracting the HTTP method, request URL, and HTTP version.
@@ -104,20 +96,8 @@ public class HttpRequestParser {
             request.setMethod(requestLine.get(0));
             request.setRequestUrl(requestLine.get(1));
             request.setHttpVersion(requestLine.get(2));
-        } // Maybe throw exception??
-
-        System.out.println("Request line:");
-        System.out.println(requestLine.get(0) + " " + requestLine.get(1) + " " + requestLine.get(2));
+        }
     }
-
-    /**
-     *
-     * Parses the content after the request line. The header data is metadata relating to the http request from the
-     * client. It saves each header line as a key-value pair in a hashmap.
-     *
-     * When \r\n\r\n is met, indicating the end of the headers, the hashmap is used to set the headers of the
-     * HttpRequest object.
-     */
 
     /**
      * Parses the headers of the HTTP request and stores them as key-value pairs in a map.
@@ -179,14 +159,7 @@ public class HttpRequestParser {
 
         }
         request.setHeaders(headers);
-        System.out.println();
-        System.out.println(headers);
     }
-
-    /**
-     *
-     * Helper method to parse the specific headers that are returned from the input stream.
-     */
 
     /**
      * Parses an individual HTTP header line and adds it to the provided header map.

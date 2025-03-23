@@ -24,7 +24,7 @@ public final class HttpRequest {
     private String urlQuery;
     private String urlPath; // Does not contain the root.
 
-    public HttpRequest() {}
+    HttpRequest() {}
 
     /**
      * Gets the HTTP method of the request.
@@ -34,7 +34,6 @@ public final class HttpRequest {
     public HttpMethod getMethod() {
         return method;
     }
-
 
     /**
      * Sets the HTTP method for the request and validates the method.
@@ -98,7 +97,6 @@ public final class HttpRequest {
                 break;
             }
         }
-        System.out.println(url.substring(0, index));
         this.urlRoot = UrlRootDirectory.getRootDirectory((index > 0) ? url.substring(0, index) : url);
         this.urlPath = url.substring(this.urlRoot.getRootDirectory().length());
     }

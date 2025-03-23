@@ -9,7 +9,6 @@ import org.example.logs.LogHandler;
 import org.example.util.FileUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import javax.swing.*;
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -25,7 +24,7 @@ import java.util.function.Consumer;
 public class ServerAdministrator implements Consumer<String> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ServerAdministrator.class);
-    private static final String DEFAULT_LOG_FILE = "logs.txt";
+    private static final String DEFAULT_LOG_FILE = "logs.txt"; // Default save file for logs.
     private static final String SAVE = "--save";
 
     private final CommandWindow commandWindow;
@@ -219,7 +218,7 @@ public class ServerAdministrator implements Consumer<String> {
                     LOGGER.info("[INFO] Logs were saved to file '" + DEFAULT_LOG_FILE + "'.");
                 } catch (IOException e) {
                     LOGGER.error("[ERROR] failed to write logs to file: " + e.getMessage());
-                    // Maybe write to console if failed???
+                    // TODO: Maybe write to console if failed???
                 }
             }
             try {

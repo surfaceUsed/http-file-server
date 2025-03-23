@@ -12,16 +12,10 @@ import org.example.logs.LogHandler;
 import org.example.servlet.HttpServlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
-
-/**
- *
- * Client handler class; handles client sessions in a separate thread, independent of other client connections.
- */
 
 /**
  * Handles the client session in a separate thread, managing communication with the client via socket. The session
