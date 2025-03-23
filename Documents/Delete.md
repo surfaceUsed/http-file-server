@@ -33,4 +33,5 @@ Content-Length: 91
 ```
 
 The server can respond either by `application/json` or `text/plain`, depending on the `Accept` header of the request. If it's set to default (`*/*`), the response will be sent in JSON format.
+
 --- 
