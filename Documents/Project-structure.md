@@ -5,7 +5,7 @@ http-file-server/
 │
 ├── src/main/java/org/example/
 |   ├── command/
-|   │   ├── files/
+|   │   ├── types/
 |   │   │   ├── handlers/
 |   │   │   |   ├── BaseHandler.java
 |   │   │   |   ├── DeleteHandler.java
@@ -121,7 +121,7 @@ http-file-server/
 - These classes ensure that the server can be configured properly through external properties and settings files. 
 
 **`core/`**
-- This package holds the core server functionality, including classes that contol the server operations, manage server sessions, and perform administartive tasks (the controller). 
+- This package holds the core server functionality, including classes that control the server operations, manage server sessions, and perform administrative tasks (the controller). 
 - It's the backbone of the server application, and oversees how it starts, runs and manages user sessions. 
 
 **`enums/`**
@@ -134,8 +134,8 @@ http-file-server/
 - It contains classes that define specific errors that may arise during the server's operation, like issues with HTTP requests or problems with the file system.
 
 **`gui/`**
-- The package contains the application GUI that the server administartor uses to interact with the server. 
-- The GUI acts as a command window where the administartor can issue commands, monitor server activities and status. 
+- The package contains the application GUI that the server administrator uses to interact with the server. 
+- The GUI acts as a command window where the administrator can issue commands, monitor server activities and status. 
 
 **`http/`**
 - Contains classes that handle HTTP request and responses. 
@@ -157,7 +157,7 @@ http-file-server/
 
 **`servlet/`**
 - The package implements server-like functionality to handle HTTP requests. 
-- The classes provides ways to retrieve the correct serlvet instance for the requests, process it, and generate an appropriate
+- The classes provide ways to retrieve the correct serlvet instance for the requests, process it, and generate an appropriate
 HTTP response. 
 
 **`util/`**

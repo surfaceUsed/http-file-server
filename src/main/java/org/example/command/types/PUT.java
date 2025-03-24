@@ -1,7 +1,7 @@
-package org.example.command.files;
+package org.example.command.types;
 
 import org.example.command.Command;
-import org.example.command.files.handlers.BaseHandler;
+import org.example.command.types.handlers.BaseHandler;
 import org.example.enums.RequestHandlerAction;
 import org.example.enums.UrlParameters;
 import org.example.error.*;

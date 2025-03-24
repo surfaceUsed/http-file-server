@@ -1,4 +1,4 @@
-package org.example.command.files.handlers;
+package org.example.command.types.handlers;
 
 import org.example.command.ContentTypeValidator;
 import org.example.enums.ContentType;
