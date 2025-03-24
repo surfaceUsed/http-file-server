@@ -12,7 +12,7 @@ handles HTTP requests like `GET`, `PUT`, `POST`, and `DELETE` and performs opera
 updating, and deleting files from the server.
 
 The server works using Java sockets to handle client-server communication, which is a great way to simulate
-low-level networking and HTTP handling without relying on high-level frameworks like Spring. The project also
+low-level networking and HTTP handling without relying on any high-level frameworks. The project also
 includes configuration files to manage server settings such as port, file paths, and other server behaviors.
 
 The goal of this project is to replicate the functionality of a cloud file server, while also providing a
@@ -37,7 +37,7 @@ a corresponding HTTP response with the relevant status, headers, and body conten
 
 - **Dynamic URL pattern matching:** The server uses dynamic URL pattern matching to handle various HTTP requests efficiently.
 
-- **Servlet routing:** Utilizes `HttpServlet` instance to route requests to specific handlers based on their URL endpoint 
+- **Servlet routing:** Utilizes custom servlet functionality to route requests to specific handlers based on their URL endpoint 
 (the root directory path) and HTTP method.
 
 - **HTTP Methods:** The server supports basic HTTP methods for file management:
