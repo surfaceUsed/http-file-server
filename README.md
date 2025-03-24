@@ -146,7 +146,6 @@ Below is a list of administrator commands:
 - [Server endpoints](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Server-endpoints.md)
 - [Servlet routing](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Servlet-routing.md)
 - Http methods: [GET](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Get.md), [PUT](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Put.md), [POST](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Post.md), [DELETE](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Delete.md)
-- [Installing the application]()
-- [Running the application]()
+- [Running the application](https://github.com/surfaceUsed/http-file-server/blob/main/Documents/Running-the-application.md)
 
 ---
