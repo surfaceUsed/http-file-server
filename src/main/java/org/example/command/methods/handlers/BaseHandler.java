@@ -1,4 +1,4 @@
-package org.example.command.types.handlers;
+package org.example.command.methods.handlers;
 
 import org.example.enums.Header;
 import org.example.enums.HttpResponseStatus;

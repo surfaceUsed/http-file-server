@@ -157,7 +157,7 @@ http-file-server/
 
 **`servlet/`**
 - The package implements server-like functionality to handle HTTP requests. 
-- The classes provide ways to retrieve the correct serlvet instance for the requests, process it, and generate an appropriate
+- The classes provide ways to retrieve the correct servlet instance for the requests, process it, and generate an appropriate
 HTTP response. 
 
 **`util/`**

@@ -1,7 +1,7 @@
-package org.example.command.types;
+package org.example.command.methods;
 
 import org.example.command.Command;
-import org.example.command.types.handlers.BaseHandler;
+import org.example.command.methods.handlers.BaseHandler;
 import org.example.enums.RequestHandlerAction;
 import org.example.error.FileSystemException;
 import org.example.error.HttpRequestParserException;

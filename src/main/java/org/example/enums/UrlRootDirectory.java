@@ -1,10 +1,10 @@
 package org.example.enums;
 
 import org.example.command.Command;
-import org.example.command.types.DELETE;
-import org.example.command.types.GET;
-import org.example.command.types.POST;
-import org.example.command.types.PUT;
+import org.example.command.methods.DELETE;
+import org.example.command.methods.GET;
+import org.example.command.methods.POST;
+import org.example.command.methods.PUT;
 import org.example.error.HttpRequestParserException;
 import org.example.service.FileService;
 import org.example.service.ServerCloudStorage;

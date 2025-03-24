@@ -1,7 +1,7 @@
-package org.example.command.types;
+package org.example.command.methods;
 
 import org.example.command.Command;
-import org.example.command.types.handlers.BaseHandler;
+import org.example.command.methods.handlers.BaseHandler;
 import org.example.enums.RequestHandlerAction;
 import org.example.enums.UrlParameters;
 import org.example.error.*;
@@ -11,32 +11,34 @@ import org.example.http.response.ResponseHandler;
 import org.example.service.FileService;
 
 /**
- * The GET class implements the Command interface and represents a command for handling HTTP GET requests related to
+ * The PUT class implements the Command interface and represents a command for handling HTTP PUT requests related to
  * file operations. It uses the FileService to process file-related operations and delegates the request handling to
  * a specific handler based on the request type.
  *
- * It processes client requests by extracting the action (such as "view" or "download") from the URL query request,
- * obtains the specific handler from the BaseHandler class, and executes it.
+ * This class processes client requests by determining the requested action (such as "update" or "override") from the
+ * URL query request, obtains the specific handler from the BaseHandler class, and executes it.
  */
-public class GET implements Command {
+public class PUT implements Command {
 
     private final FileService service;
 
-    public GET(FileService service) {
+    public PUT(FileService service) {
         this.service = service;
     }
 
     /**
-     * Executes the GET command by extracting the action from the query parameters of the request, determining the
-     * appropriate handler type (either VIEW or DOWNLOAD), and executing the handler. If any errors occur during the
-     * execution, it catches the exceptions and handles the response with the appropriate error message.
+     * Executes the PUT command by extracting the action parameter from the request URL (such as "update" or "override")
+     * and passing the request to the appropriate handler.
+     * If an error occurs, it catches the exception and processes the response with an error message.
      *
      * @param request The HttpRequest containing the details of the client request.
      * @param response The HttpResponse object to send back the response to the client.
      */
     @Override
     public void execute(HttpRequest request, HttpResponse response) {
+
         try {
+
             String action = UrlParameters.mapQueryValues(request.getUrlQuery()).get(UrlParameters.ACTION);
             RequestHandlerAction type = RequestHandlerAction.getHandlerType(action);
             BaseHandler.getHandler(type, request, response, this.service).run();
