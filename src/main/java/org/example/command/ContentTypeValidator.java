@@ -6,7 +6,6 @@ import org.example.enums.HttpResponseStatus;
 import org.example.error.HttpResponseParserException;
 import org.example.http.request.HttpRequest;
 import org.example.http.response.HttpResponse;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

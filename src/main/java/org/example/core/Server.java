@@ -7,7 +7,6 @@ import org.example.logs.LogHandler;
 import org.example.servlet.ServletDispatcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;

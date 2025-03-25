@@ -1,11 +1,6 @@
 package org.example.enums;
 
 /**
- *
- * Response status messages the server can produce.
- */
-
-/**
  * Enum representing HTTP response status codes and their corresponding messages. This enum provides predefined status
  * codes, messages, and descriptions that the server can use to communicate response statuses to clients.
  */

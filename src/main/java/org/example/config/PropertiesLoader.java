@@ -1,7 +1,6 @@
 package org.example.config;
 
 import org.example.error.ServerConfigurationException;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
