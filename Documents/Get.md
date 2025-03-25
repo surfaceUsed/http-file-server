@@ -23,7 +23,7 @@ Host: www.localhost:8080
 Accept: */*
 Connection: close
 ```
-In both cases, the client is requesting a specific file from the `files/` endpoint.
+In both cases, the client is requesting a specific file from the `/files` endpoint.
 
 A successfull response would look like this.
 ```bash
