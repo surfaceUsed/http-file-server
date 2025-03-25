@@ -73,21 +73,6 @@ public class UploadHandler extends BaseHandler {
      * @throws FileSystemException         If an error occurs while saving the file.
      */
     private void parseUrlRequest() throws HttpRequestParserException, FileSystemException {
-        /*String[] parts = parseUrlParts();
-        if (parts.length != 2) {
-            throw new HttpRequestURLException("URL is malformed",
-                    HttpResponseStatus.CLIENT_ERROR_BAD_REQUEST);
-        }
-        this.fileName = parts[1];
-
-
-        Burde heller lage url: /files/upload, og hente filnavnet fra conteten disposition header.
-
-        byte[] fileToPost = extractRequestBody(request);
-        this.fileId = this.service.add(this.fileName, fileToPost);
-
-         */
-
         this.fileName = parseContentDisposition(request);
         byte[] fileToPost = extractRequestBody(request);
         this.fileId = this.service.add(this.fileName, fileToPost);
@@ -113,8 +98,6 @@ public class UploadHandler extends BaseHandler {
         System.out.println("what is filename: " + splitDisposition[1].substring(1, splitDisposition[1].length() - 1));
         return splitDisposition[1].substring(1, splitDisposition[1].length() - 1);
     }
-
-
 
     /**
      * Creates an HTTP response message indicating that the file was successfully uploaded.
