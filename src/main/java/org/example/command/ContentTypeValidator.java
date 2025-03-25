@@ -42,7 +42,6 @@ public final class ContentTypeValidator {
      * Validates the content type of the client request.
      * It checks if the content type of the request is valid for the specified method and URL. If the content type is
      * invalid, an HttpResponseParserException is thrown.
-     * The valid content type is saved in the response object for later use. // DONT KNOW IF TRUE....
      *
      * @param request The incoming HTTP request.
      * @param response The HTTP response object.
