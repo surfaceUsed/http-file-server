@@ -1,7 +1,6 @@
 package org.example.enums;
 
 import org.example.error.HttpRequestParserException;
-
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -13,7 +12,7 @@ public enum UrlParameters {
 
     NAME("name"),
     ID("id"),
-    QUERY("query"), // REMEBER TO UPDATE IN APPLICATION
+    QUERY("query"),
     ACTION("action"),
     VALUE("value"),
     OVERRIDE("override"),
