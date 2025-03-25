@@ -3,7 +3,6 @@ package org.example.http.request;
 import org.example.enums.Header;
 import org.example.enums.HttpResponseStatus;
 import org.example.error.HttpRequestParserException;
-
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
