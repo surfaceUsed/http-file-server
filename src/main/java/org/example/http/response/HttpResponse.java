@@ -5,7 +5,6 @@ import org.example.enums.ConnectionStatus;
 import org.example.enums.ContentType;
 import org.example.enums.Header;
 import org.example.model.HttpMessage;
-
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;

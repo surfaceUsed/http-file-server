@@ -3,7 +3,6 @@ package org.example.http.response;
 import org.example.enums.ContentType;
 import org.example.model.HttpMessage;
 import org.example.util.JsonUtil;
-
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 

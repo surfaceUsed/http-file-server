@@ -2,7 +2,6 @@ package org.example.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.example.enums.HttpResponseStatus;
-
 import java.util.ArrayList;
 import java.util.List;
 

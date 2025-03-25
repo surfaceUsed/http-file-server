@@ -7,7 +7,6 @@ import org.example.enums.HttpMethod;
 import org.example.enums.HttpResponseStatus;
 import org.example.enums.UrlRootDirectory;
 import org.example.error.HttpRequestParserException;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

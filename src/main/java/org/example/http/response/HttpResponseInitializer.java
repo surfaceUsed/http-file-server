@@ -4,7 +4,6 @@ import org.example.enums.ConnectionStatus;
 import org.example.enums.ContentType;
 import org.example.enums.Header;
 import org.example.enums.HttpResponseStatus;
-
 import java.util.Map;
 
 /**
