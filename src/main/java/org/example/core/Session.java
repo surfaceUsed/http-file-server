@@ -126,14 +126,14 @@ public class Session implements Runnable {
         try {
             if (this.socket != null) {
                 this.socket.close();
-                LogHandler.handleLog(LOGGER, LoggerType.INFO, this.socket + " closed.");
+                LogHandler.handleLog(LOGGER, LoggerType.INFO, "Socket " + this.socket + " closed.");
             }
         } catch (IOException e) {
             LogHandler.handleLog(LOGGER, LoggerType.ERROR, "Closing client socket failed: " + e.getMessage());
         } finally {
             if (this.socket != null) {
                 this.server.removeConnection(this.socket);
-                LogHandler.handleLog(LOGGER, LoggerType.INFO, " socket connection '" + this.socket +
+                LogHandler.handleLog(LOGGER, LoggerType.INFO, "Socket connection '" + this.socket +
                         "' removed from server.");
             }
         }
