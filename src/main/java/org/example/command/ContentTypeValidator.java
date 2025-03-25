@@ -53,20 +53,11 @@ public final class ContentTypeValidator {
                                                          List<ContentType> validRequestTypes) throws HttpResponseParserException {
         if (!validRequestTypes.contains(ContentType.ACCEPT_ANY_TYPE)) {
             ContentType requestType = ContentType.getContentType(request.getHeaders().get(Header.CONTENT_TYPE.getName())); // Returns NO_CONTENT_TYPE if the header is missing.
-            //System.out.println(requestType.getType());
             if (requestType != ContentType.NO_CONTENT_TYPE && !validRequestTypes.contains(requestType)) {
                 throw new HttpResponseParserException("The request content type is missing or cannot be processed by the server",
                         HttpResponseStatus.CLIENT_ERROR_UNSUPPORTED_MEDIA_TYPE);
             }
         }
-
-        /*ContentType requestType = ContentType.getContentType(request.getHeaders().get(Header.CONTENT_TYPE.getName())); // Returns NO_CONTENT_TYPE if the header is missing.
-        System.out.println(requestType.getType());
-        if (requestType != ContentType.NO_CONTENT_TYPE && !validRequestTypes.contains(requestType)) {
-            throw new HttpResponseParserException("The request content type is missing or cannot be processed by the server",
-                    HttpResponseStatus.CLIENT_ERROR_UNSUPPORTED_MEDIA_TYPE);
-        }*/
-        //response.setClientRequestContentType(requestType); // Vet egentlig ikke om jeg trenger å sette den, fordi den brukes ikke uansett.....
     }
 
     /**
