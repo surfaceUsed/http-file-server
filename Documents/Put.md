@@ -59,7 +59,7 @@ For the server to handle the request properly, ensure the following request head
 
 **Update file name**
 
-The `action` parameter of the URL query needs to be set to `"update"`, and the `value` parameter should contain the new file name.
+The `action` parameter of the URL query needs to be set to `"update-name"`, and the `value` parameter should contain the new file name.
 
 To update a file name, the client can specify the file by either its name or ID:
 
@@ -95,7 +95,7 @@ Content-Length: 109
 ```
 
 The new file name has to have the same file extension as the previous file:
-   - If the previous file name was `file.txt` and the new name is `new-name` it needs to be followed by the `txt` extension. 
+   - If the previous file name was `file.txt` and the new name is `new-name` it needs to be followed by the `.txt` extension. 
 
 The server can respond either by `application/json` or `text/plain`, depending on the `Accept` header of the request. If it's set to default (`*/*`), the response will be sent in JSON format.
 
