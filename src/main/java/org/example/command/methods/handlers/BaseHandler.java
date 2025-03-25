@@ -69,7 +69,7 @@ public abstract class BaseHandler {
             case UPDATE -> new UpdateHandler(request, response, fileService);
             case OVERRIDE -> new OverrideHandler(request, response, fileService);
             case DELETE -> new DeleteHandler(request, response, fileService);
-            default -> throw new HttpRequestURLException("URL is malformed. '" + type.getHandlerType() + "' is not a valid action",
+            case INVALID -> throw new HttpRequestURLException("URL is malformed. Invalid action requested.",
                     HttpResponseStatus.CLIENT_ERROR_BAD_REQUEST);
         };
     }
