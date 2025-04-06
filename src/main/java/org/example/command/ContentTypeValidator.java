@@ -33,7 +33,7 @@ public final class ContentTypeValidator {
      */
     public static void validateContentTypes(HttpRequest request, HttpResponse response, List<ContentType> validRequestTypes,
                                             List<ContentType> validResponseTypes) throws HttpResponseParserException {
-        validateClientRequestContentType(request, response, validRequestTypes);
+        validateClientRequestContentType(request, validRequestTypes);
         validateServerResponseContentType(request, response, validResponseTypes);
     }
 
@@ -43,11 +43,10 @@ public final class ContentTypeValidator {
      * invalid, an HttpResponseParserException is thrown.
      *
      * @param request The incoming HTTP request.
-     * @param response The HTTP response object.
      * @param validRequestTypes A list of content types the server can handle for incoming requests.
      * @throws HttpResponseParserException If the request content type is unsupported or missing.
      */
-    private static void validateClientRequestContentType(HttpRequest request, HttpResponse response,
+    private static void validateClientRequestContentType(HttpRequest request,
                                                          List<ContentType> validRequestTypes) throws HttpResponseParserException {
         if (!validRequestTypes.contains(ContentType.ACCEPT_ANY_TYPE)) {
             ContentType requestType = ContentType.getContentType(request.getHeaders().get(Header.CONTENT_TYPE.getName())); // Returns NO_CONTENT_TYPE if the header is missing.
@@ -63,6 +62,8 @@ public final class ContentTypeValidator {
      * It checks if the server can provide a response in any of the content types the client has requested.
      * If no valid content type is found, an HttpResponseParserException is thrown.
      *
+     * TODO: better parsing of ACCEPT header string. Current parsing only splits at','. Does not take priority into consideration.
+     *
      * @param request The incoming HTTP request.
      * @param response The HTTP response object.
      * @param validResponseTypes A list of content types the server can return in responses.
@@ -70,7 +71,6 @@ public final class ContentTypeValidator {
      */
     private static void validateServerResponseContentType(HttpRequest request, HttpResponse response,
                                                           List<ContentType> validResponseTypes) throws HttpResponseParserException {
-        // The ACCEPT header has alle the valid response types saved in a string, separated by ','. This string is split into an array, and then saved in a List-object.
         List<String> clientAcceptTypes = new ArrayList<>(Arrays.asList(request.getHeaders().get(Header.ACCEPT.getName()).split(",")));
         if (!clientAcceptTypes.isEmpty()) {
             if (clientAcceptTypes.contains(ContentType.ACCEPT_ANY_TYPE.getType())) {
