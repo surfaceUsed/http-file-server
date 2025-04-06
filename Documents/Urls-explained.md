@@ -10,7 +10,7 @@ Retrieve a file by name:
 /files/name/file.txt?action=download
 ```
 
-- This request retrieves the file identified by `file.txt` from the `/files` directory.
+- This request retrieves the file identified by `file.txt` from the `/files` endpoint.
 - The `action=download` query parameter signals that the server should serve the file for download.
 
 Retrieve a file by ID:
@@ -18,7 +18,7 @@ Retrieve a file by ID:
 /files/id/1?action=download
 ```
 
-- This request retrieves the file with ID `1` from the `/files` directory.
+- This request retrieves the file with ID `1` from the `/files` endpoint.
 - Similar to the name-based retrieval, the `action=download` query indicates the file should be served for download.
 
 **View file metadata**
@@ -28,7 +28,7 @@ View metadata by file name:
 /files/name/file.txt?action=view
 ```
 
-- This request retrieves the metadata of the file `file.txt` located in the `/files` directory.
+- This request retrieves the metadata of the file `file.txt` located at the `/files` endpoint.
 - The metadata include details such as file name, id, size, type, creation date, or last modified timestamp.
 
 View metadata by file ID:
@@ -36,7 +36,7 @@ View metadata by file ID:
 /files/id/1?action=view
 ```
 
-- This request retrieves the metadata of the file with ID `1` from the `/files` directory.
+- This request retrieves the metadata of the file with ID `1` from the `/files` endpoint.
 
 Search for files and retrieve metadata based on a query:
 ```bash
@@ -62,7 +62,7 @@ Override a file by name:
 /files/name/file.txt?action=override
 ```
 
-- This request overrides the file identified by `file.txt` in the `/files` directory.
+- This request overrides the file identified by `file.txt` in the `/files` endpoint.
 - The new file data should be contained within the request body.
 
 Override a file by ID:
@@ -70,7 +70,7 @@ Override a file by ID:
 /files/id/1?action=override
 ```
 
-- This request overrides the file with ID `1` in the `/files` directory.
+- This request overrides the file with ID `1` in the `/files` endpoint.
 - The file's new content is sent as part of the HTTP request body
 
 **Update file name**
@@ -80,7 +80,7 @@ Update the file name by name:
 /files/name/file.txt?action=update-name&value=new-name.txt
 ```
 
-- This request updates the name of the file `file.txt` to `new-name.txt` in the `/files` directory.
+- This request updates the name of the file `file.txt` to `new-name.txt` in the `/files` endpoint.
 - The `value` query parameter specifies the new name for the file.
 
 Update the file name by ID:
@@ -88,7 +88,7 @@ Update the file name by ID:
 /files/id/1?action=update-name&value=new-name.txt
 ```
 
-- This request updates the name of the file with ID `1` to `new-name.txt` in the `/files` directory.
+- This request updates the name of the file with ID `1` to `new-name.txt` in the `/files` endpoint.
 - Similar to the name-based update, the new name is passed through the value query parameter.
 
 **Delete file**
@@ -98,7 +98,7 @@ Delete a file by name:
 /files/name/file.txt
 ```
 
-- This request deletes the file `file.txt` from the `/files` directory.
+- This request deletes the file `file.txt` from the `/files` endpoint.
 - No query parameters are needed for deletion. Simply use the name of the file to identify it.
 
 Delete a file by ID:
@@ -106,7 +106,7 @@ Delete a file by ID:
 /files/id/1
 ```
 
-- This request deletes the file with ID `1` from the `/files` directory.
+- This request deletes the file with ID `1` from the `/files` endpoint.
 - Similar to the name-based deletion, the file is identified using its ID.
 
 **General Notes**
