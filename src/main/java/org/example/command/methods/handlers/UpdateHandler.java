@@ -66,7 +66,7 @@ public class UpdateHandler extends BaseHandler {
 
     /**
      * Parses the request URL to extract parameters and determine the update operation. It retrieves the path parameter
-     * from the URL ("id" or "name"), extracts the query value, and fetches the "VALUE" parameter from the request
+     * from the URL ("id" or "name"), extracts the fileIdentifier, and fetches the "VALUE" parameter from the request
      * query string, which represents the new file name.
      *
      * @throws HttpRequestURLException     If the URL is malformed.
@@ -80,35 +80,35 @@ public class UpdateHandler extends BaseHandler {
                     HttpResponseStatus.CLIENT_ERROR_BAD_REQUEST);
         }
         UrlParameters pathParameter = UrlParameters.getParameter(urlParts[0]);
-        String query = urlParts[1];
+        String fileIdentifier = urlParts[1];
         String updateName = UrlParameters.mapQueryValues(request.getUrlQuery()).get(UrlParameters.VALUE);
-        handleUpdateRequest(pathParameter, query, updateName);
+        handleUpdateRequest(pathParameter, fileIdentifier, updateName);
     }
 
     /**
      * Handles the update request based on the given parameter type. Supports updating a file by name or ID.
      *
      * @param parameter   The URL parameter type (NAME or ID).
-     * @param query       The query value (existing file name or ID).
+     * @param fileIdentifier       The identifier used to search the file system.
      * @param updateName  The new file name to update.
      * @throws HttpRequestParserException  If the file type of the new name doesn't match the original.
      * @throws FileSystemException         If an error occurs while updating the file.
      * @throws HttpRequestURLException     If the URL lacks valid parameters.
      */
-    private void handleUpdateRequest(UrlParameters parameter, String query, String updateName)
+    private void handleUpdateRequest(UrlParameters parameter, String fileIdentifier, String updateName)
             throws HttpRequestParserException, FileSystemException, HttpRequestURLException {
         Identifier identifier;
         switch (parameter) {
             case NAME -> {
-                if (!FileDetails.isEqualFileType(query, updateName)) {
+                if (!FileDetails.isEqualFileType(fileIdentifier, updateName)) {
                     throw new HttpRequestParserException("The file type of the updated file name does not match the original file type",
                             HttpResponseStatus.CLIENT_ERROR_BAD_REQUEST);
                 }
-                identifier = FileIdentifier.newBuilder().setFileName(query).build();
+                identifier = FileIdentifier.newBuilder().setFileName(fileIdentifier).build();
                 this.updateMessage = "New file name: " + updateName;
             }
             case ID -> {
-                Long fileId = parseId(query);
+                Long fileId = parseId(fileIdentifier);
                 identifier = FileIdentifier.newBuilder().setFileId(fileId).build();
                 String originalFileName = this.service.search(identifier).getFileName();
                 if (!FileDetails.isEqualFileType(originalFileName, updateName)) {
