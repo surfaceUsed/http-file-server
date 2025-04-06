@@ -94,7 +94,6 @@ public class UploadHandler extends BaseHandler {
                     "is missing", HttpResponseStatus.CLIENT_ERROR_BAD_REQUEST);
         }
         String[] splitDisposition = disposition.split("=");
-        System.out.println("what is filename: " + splitDisposition[1].substring(1, splitDisposition[1].length() - 1));
         return splitDisposition[1].substring(1, splitDisposition[1].length() - 1);
     }
 
