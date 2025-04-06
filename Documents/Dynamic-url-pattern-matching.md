@@ -10,7 +10,7 @@ The generic server URL and specific client URL are split into URL path and URL q
 
 The URL path is divided by `/` into segments. These segments are checked to see if they are either static (predefined) values or dynamic parameters (indicated by curly braces `{}`). The client URL path is then compared with the generic URL path. Static values must match exactly, while dynamic parameters are filled in by the clients URL.
 
-An example of a URL path where `name` is a static parameter that has to match, and `{name}` is a dynamic parameter that is filled in by the client UTR:
+An example of a URL path where `name` is a static parameter that has to match, and `{name}` is a dynamic parameter that is filled in by the client URL:
 
 Consider the following example:
 
@@ -44,7 +44,7 @@ Here, `action` is static and must match, while `{action}` is dynamic and gets re
 
 **Overall matching**
 
-The `UrlStructureMatcher` class handles the matching process, ensuring both the path and query parts of the URL are correctly compared. It also checks that the lengths of the paths and query parameters match and that the correct number of static and dynamic parameters are present.
+The `UrlStructureMatcher` class handles the matching process, ensuring both the path and query parts of the URL are correctly compared. It also checks that the lengths of the paths and queries match and that the correct number of static and dynamic parameters are present.
 
 Example:
 ```bash
@@ -53,7 +53,7 @@ Generic URL: name/{name}?action={action}
 Specific URL: name/file-name?action=download
 ```
 
-If either the path or query doesn't match, the comparison returns false, indicating the client URL doesn't adhere to the expected URL structure.
+If either the path or query dont match, the comparison returns false, indicating the client URL doesn't adhere to the expected URL structure.
 
 **Key points**
 
