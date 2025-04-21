@@ -25,12 +25,13 @@ Connection: close
 ```
 In both cases, the client is requesting a specific file from the `/files` endpoint.
 
-A successfull response would look like this.
+A successful response looks like this.
 ```bash
 HTTP/1.1 200 OK
 Server: Custom Java Server
 Connection: close
 Content-Type: application/octet-stream
+Content-Disposition: attachment; filename="file.txt"
 Content-Length: 1024
    
 <file data>
@@ -39,6 +40,7 @@ Content-Length: 1024
 **Important response settings**
 
 - The server always sets the `Content-Type` to `application/octet-stream` when returning a file.
+- The name of the downloaded file is specified in the `Content-Disposition` header.
 - The `Content-Length` header specifies the size of the file in bytes.
 - The response body contains the file data itself.
 
